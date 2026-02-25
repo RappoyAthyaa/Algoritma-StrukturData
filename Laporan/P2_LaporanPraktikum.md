@@ -17,7 +17,7 @@
 ### 2.1.2 Verivikasi Hasil Percobaan
 ➡ Gambar hasil kode program untuk percobaan 1
 
-![Screenshot](img/SS_p2/SS_Tugas1_Hasil.png)
+![Screenshot](img/SS_P2/SS_Tugas1_Hasil.png)
 
 
 ### 2.1.3 Pertanyaan
@@ -69,7 +69,7 @@
 ### 2.2.2 Verivikasi Hasil Percobaan
 ➡ Gambar hasil kode program untuk percobaan 2
 
-![Screenshot](img/SS_p2/SS_Tugas2_Hasil.png)
+![Screenshot](img/SS_P2/SS_Tugas2_Hasil.png)
 
 ### 2.2.3 Pertanyaan
 
@@ -100,12 +100,12 @@
 
 ➡ Gambar kode program untuk percobaan 3 class "MahasiswaMain02.java"
 
-![Screenshot](img/SS_P2/SS_Tugas3_main.png)
+![Screenshot](img/SS_P2/SS_Tugas3_Main.png)
 
 ### 2.2.2 Verivikasi Hasil Percobaan
 ➡ Gambar hasil kode program untuk percobaan 3
 
-![Screenshot](img/SS_p2/SS_Tugas3_Hasil.png)
+![Screenshot](img/SS_P2/SS_Tugas3_Hasil.png)
 
 ### 2.3.3 Pertanyaan
 
