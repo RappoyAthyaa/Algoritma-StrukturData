@@ -5,9 +5,14 @@ import java.util.Scanner;
 public class MatakuliahDemo02 {
     public static void main(String[] args) {
         Scanner rappyAthaya = new Scanner(System.in);
-        Matakuliah02[] arrayOfMatakuliah = new Matakuliah02[3];
 
-        for (int i = 0; i < 3; i++) {
+        System.out.print("Masukkan jumlah Matakuliah : ");
+        int jumlah = Integer.parseInt(rappyAthaya.nextLine());
+        System.out.println("-----------------------------");
+
+        Matakuliah02[] arrayOfMatakuliah = new Matakuliah02[jumlah];
+
+        for (int i = 0; i < jumlah; i++) {
             System.out.println("Masukkan Data Matakuliah ke-" + (i + 1));
             arrayOfMatakuliah[i] = new Matakuliah02();
             arrayOfMatakuliah[i].tambahData(rappyAthaya);
