@@ -8,7 +8,7 @@ public class Matakuliah02 {
     public int sks;
     public int jumlahJam;
 
-    public Matakuliah02 (String kode, String nama, int sks, int jumlahJam) {
+    public Matakuliah02(String kode, String nama, int sks, int jumlahJam) {
         this.kode = kode;
         this.nama = nama;
         this.sks = sks;
@@ -26,5 +26,12 @@ public class Matakuliah02 {
         this.sks = Integer.parseInt(scanner.nextLine());
         System.out.print("JumlahJam : ");
         this.jumlahJam = Integer.parseInt(scanner.nextLine());
+    }
+
+    public void cetakInfo() {
+        System.out.println("Kode        : " + this.kode);
+        System.out.println("Nama        : " + this.nama);
+        System.out.println("Sks         : " + this.sks);
+        System.out.println("Jumlah Jam  : " + this.jumlahJam);
     }
 }
