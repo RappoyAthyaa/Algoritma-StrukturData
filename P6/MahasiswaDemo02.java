@@ -14,24 +14,28 @@ public class MahasiswaDemo02 {
         list.setUkuran(n); 
 
         for (int i = 1; i <= n; i++) {
-            System.out.println("\n--- Input Mahasiswa ke-" + i + " ---");
+            if (i == 1) {
+            System.out.print("Masukkan Data Mahasiswa ke-" + i + "\n");
+            } else {
+            System.out.print("Masukkan Data Mahasiswa ke-" + i + "\n");
+            }
 
-            System.out.print("Nama  : ");
-            String nama = rappyAthya.nextLine();
+        System.out.print("NIM   : ");
+        String nim = rappyAthya.nextLine();
 
-            System.out.print("NIM   : ");
-            String nim = rappyAthya.nextLine();
+        System.out.print("Nama  : ");
+        String nama = rappyAthya.nextLine();
 
-            System.out.print("IPK   : ");
-            double ipk = rappyAthya.nextDouble();
-            rappyAthya.nextLine(); 
+        System.out.print("Kelas : ");
+        String kelas = rappyAthya.nextLine();
 
-            System.out.print("Kelas : ");
-            String kelas = rappyAthya.nextLine();
+        System.out.print("IPK   : ");
+        double ipk = Double.parseDouble(rappyAthya.nextLine());
+        System.out.println("--------------------------------");
 
-            Mahasiswa02 m = new Mahasiswa02(nim, nama, kelas, ipk);
-            list.tambah(m);
-        }
+        Mahasiswa02 m = new Mahasiswa02(nim, nama, kelas, ipk);
+        list.tambah(m);
+    }
 
         System.out.println("\n=============================");
         System.out.println("Data Mahasiswa Sebelum Sorting:");
@@ -41,6 +45,12 @@ public class MahasiswaDemo02 {
         list.bubbleSort();
         System.out.println("=============================");
         System.out.println("Data Mahasiswa Setelah Sorting (IPK DESC):");
+        System.out.println("=============================");
+        list.tampil();
+
+        list.selectionSort();
+        System.out.println("=============================");
+        System.out.println("Data yang sudah terurut menggunakan SELECTION SORT (ASC)");
         System.out.println("=============================");
         list.tampil();
     }
