@@ -6,7 +6,9 @@ public class MahasiswaDemo02 {
     public static void main(String[] args) {
         MahasiswaBerprestasi02 list = new MahasiswaBerprestasi02();
         Scanner rappyAthya = new Scanner(System.in);
-        int jumMhs=5;
+
+        System.out.print("Masukkan jumlah mahasiswa: ");
+        int jumMhs = Integer.parseInt(rappyAthya.nextLine());
 
         list.setUkuran(jumMhs);
 
@@ -22,19 +24,20 @@ public class MahasiswaDemo02 {
             String ip = rappyAthya.nextLine();
             Double ipk = Double.parseDouble(ip);
             System.out.println("--------------------------------");
-            list.tambah (new Mahasiswa02(nim, nama, kelas, ipk));
+            list.tambah(new Mahasiswa02(nim, nama, kelas, ipk));
         }
+
         list.tampil();
         System.out.println("-----------------------------------------------------");
         System.out.println("Pencarian data");
         System.out.println("-----------------------------------------------------");
         System.out.println("masukkan ipk mahasiswa yang dicari: ");
         System.out.print("IPK: ");
-        double cari = rappyAthya.nextDouble();
+        String ip = rappyAthya.nextLine();
+        double cari = Double.parseDouble(ip);
 
         System.out.println("menggunakan sequential searching");
-        double posisi = list.sequentialSearching(cari);
-        int pss= (int)posisi;
+        int pss = list.sequentialSearching(cari); 
         list.tampilPosisi(cari, pss);
         list.tampilDataSearch(cari, pss);
         System.out.println("--------------------------------");
@@ -44,12 +47,12 @@ public class MahasiswaDemo02 {
         System.out.println("-----------------------------------------------------");
         System.out.println("masukkan ipk mahasiswa yang dicari: ");
         System.out.print("IPK: ");
-        double cari1 = rappyAthya.nextDouble();
-         System.out.println("--------------------------------");
-         System.out.println("menggunakan binary search");
-         System.out.println("--------------------------------");
-         double posisi2 = list.findBinarySearch(cari1, 0, jumMhs-1);
-        int pss2= (int)posisi2;
+        String ip1 = rappyAthya.nextLine();
+        double cari1 = Double.parseDouble(ip1);
+        System.out.println("--------------------------------");
+        System.out.println("menggunakan binary search");
+        System.out.println("--------------------------------");
+        int pss2 = list.findBinarySearch(cari1, 0, jumMhs - 1); 
         list.tampilPosisi(cari1, pss2);
         list.tampilDataSearch(cari1, pss2);
     }
