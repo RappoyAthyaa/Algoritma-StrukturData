@@ -71,4 +71,8 @@ public class StackTugasMahasiswa02 {
             return null;
         }
     }
+
+    public int count() {
+        return top + 1; 
+    }
 }
