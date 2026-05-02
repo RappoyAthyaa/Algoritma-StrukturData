@@ -14,6 +14,7 @@ public class MahasiswaDemo02 {
             System.out.println("2. Menilai Tugas");
             System.out.println("3. Melihat Tugas Teratas");
             System.out.println("4. Melihat Daftar Tugas");
+            System.out.println("5. Keluar");          
             System.out.print("Pilih: ");
             pilih = rappyAthya.nextInt();
             rappyAthya.nextLine();
@@ -29,7 +30,7 @@ public class MahasiswaDemo02 {
                     stack.push(mhs);
                     System.out.printf("Tugas %s berhasil dikumpulkan\n", mhs.nama);
                     break;
-                
+
                 case 2:
                     Mahasiswa02 dinilai = stack.pop();
                     if (dinilai != null) {
@@ -40,22 +41,27 @@ public class MahasiswaDemo02 {
                         System.out.printf("Nilai Tugas %s adalah %d\n", dinilai.nama, nilai);
                     }
                     break;
+
                 case 3:
                     Mahasiswa02 lihat = stack.peek();
                     if (lihat != null) {
                         System.out.println("Tugas terakhir dikumpulkan oleh " + lihat.nama);
-                    } 
+                    }
                     break;
+
                 case 4:
                     System.out.println("Daftar semua tugas");
                     System.out.println("Nama\tNIM\tKelas");
                     stack.print();
                     break;
+
+                case 5:                                
+                    System.out.println("Keluar dari program.");
+                    break;
+
                 default:
                     System.out.println("Pilihan tidak valid.");
             }
-        } while (pilih >= 1 && pilih <= 4);
-            {
-        }
+        } while (pilih != 5);                         
     }
 }
