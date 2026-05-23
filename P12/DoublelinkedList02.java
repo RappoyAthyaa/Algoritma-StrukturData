@@ -90,9 +90,14 @@ public class DoublelinkedList02 {
 
     public void removeFirst() {
         if (isEmpty()) {
-            System.out.println("Linked List kosong.");
+            System.out.println("Linked List kosong, tidak ada data yang dihapus.");
             return;
         }
+
+        System.out.println("Data yang dihapus dari awal:");
+        System.out.println("---------------------------");
+        head.data.tampil();
+        System.out.println("---------------------------");
 
         if (head == tail) {
             head = tail = null;
@@ -100,13 +105,19 @@ public class DoublelinkedList02 {
             head = head.next;
             head.prev = null;
         }
+        System.out.println("Data berhasil dihapus dari awal list.\n");
     }
 
     public void removeLast() {
         if (isEmpty()) {
-            System.out.println("Linked List kosong.");
+            System.out.println("Linked List kosong, tidak ada data yang dihapus.");
             return;
         }
+
+        System.out.println("Data yang dihapus dari akhir:");
+        System.out.println("---------------------------");
+        tail.data.tampil(); 
+        System.out.println("---------------------------");
 
         if (head == tail) {
             head = tail = null;
@@ -114,5 +125,6 @@ public class DoublelinkedList02 {
             tail = tail.prev;
             tail.next = null;
         }
+        System.out.println("Data berhasil dihapus dari akhir list.\n");
     }
 }
