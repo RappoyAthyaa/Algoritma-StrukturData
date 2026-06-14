@@ -17,6 +17,7 @@ public class MainRoyalDelish02 {
             System.out.println("2. Cetak Antrian");
             System.out.println("3. Hapus Antrian dan Pesan");
             System.out.println("4. Laporan Pesanan");
+            System.out.println("5. Rekap Pesanan");
             System.out.println("0. Keluar");
             System.out.print("Pilih menu : ");
             pilihan = rappyAthya.nextInt();
@@ -60,6 +61,10 @@ public class MainRoyalDelish02 {
 
                 case 4:
                     pesanan.laporan();
+                    break;
+
+                case 5:
+                    pesanan.laporanRekap();
                     break;
 
                 case 0:

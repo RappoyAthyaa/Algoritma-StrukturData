@@ -49,7 +49,7 @@ public class DoubleLinkedListAntrian02 {
         }
         size--;
         return pembeli;
-    }
+    } 
 
     public void cetakAntrian() {
         if (isEmpty()) {

@@ -4,11 +4,14 @@ public class DoubleLinkedListPesanan02 {
     NodePesanan02 head;
     NodePesanan02 tail;
     int totalPendapatan;
+    DoubleLinkedListRekap02 LinkedListRekap;
+
 
     public DoubleLinkedListPesanan02() {
         head = null;
         tail = null;
         totalPendapatan = 0;
+        LinkedListRekap = new DoubleLinkedListRekap02();  
     }
 
     public boolean isEmpty() {
@@ -28,25 +31,27 @@ public class DoubleLinkedListPesanan02 {
             tail = newNode;
         }
         totalPendapatan += harga;
+
+        LinkedListRekap.tambahAtauUpdate(nama); // untuk mengupdate rekap secara otomatis
     }
 
     public void sortByNamaPesanan() {
         if (isEmpty() || head == tail) return;
 
-        boolean swapped;
+        boolean swap;
         do {
-            swapped = false;
+            swap = false;
             NodePesanan02 curr = head;
             while (curr.next != null) {
                 if (curr.data.namaPesanan.compareToIgnoreCase(curr.next.data.namaPesanan) > 0) {
                     Pesanan02 temp = curr.data;
                     curr.data = curr.next.data;
                     curr.next.data = temp;
-                    swapped = true;
+                    swap = true;
                 }
                 curr = curr.next;
             }
-        } while (swapped);
+        } while (swap);
     }
 
     public void laporan() {
@@ -69,5 +74,10 @@ public class DoubleLinkedListPesanan02 {
         }
         System.out.println("--------------------------------------");
         System.out.println("Total Pendapatan : Rp " + totalPendapatan);
+    }
+
+    // Method baru: untuk menampilkan tampilkan rekap per menu
+    public void laporanRekap() {
+        LinkedListRekap.tampilkanRekap();
     }
 }
