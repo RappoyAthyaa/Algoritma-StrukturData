@@ -12,12 +12,20 @@ public class BinaryTreeArrayMain02 {
         Mahasiswa02 mhs6 = new Mahasiswa02("244160205", "Ehsan", "D", 3.61);
         Mahasiswa02 mhs7 = new Mahasiswa02("244160170", "Fizi", "B", 3.86);
 
-        Mahasiswa02[] dataMahasiswas = {mhs1, mhs2, mhs3, mhs4, mhs5, mhs6, mhs7, null, null, null};
-        int idxLast = 6;
-
-        bta.populateData(dataMahasiswas, idxLast);
+        System.out.println("=== PENGUJIAN TUGAS 4: METHOD add() ===");
+        bta.add(mhs1);
+        bta.add(mhs2);
+        bta.add(mhs3);
+        bta.add(mhs4);
+        bta.add(mhs5);
+        bta.add(mhs6);
+        bta.add(mhs7);
 
         System.out.println("\nInorder Traversal Mahasiswa: ");
         bta.traverseInOrder(0);
+
+        System.out.println("\n=== PENGUJIAN TUGAS 4: METHOD traversePreOrder() ===");
+        System.out.println("PreOrder Traversal Mahasiswa: ");
+        bta.traversePreOrder(0);
     }
 }
