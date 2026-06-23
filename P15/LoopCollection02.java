@@ -8,8 +8,11 @@ public class LoopCollection02 {
         fruits.add("Orange");
         fruits.add("Watermelon");
         fruits.add("Leci");
-        fruits.push("Salak");
+        fruits.add("Mango");
+        fruits.add("guava");
+        fruits.add("avocado");
         fruits.set(fruits.size() - 1, "Strawberry");
+        java.util.Collections.sort(fruits);
         
         for (String fruit : fruits) {
             System.out.printf("%s ", fruit);
