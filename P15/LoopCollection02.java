@@ -9,6 +9,7 @@ public class LoopCollection02 {
         fruits.add("Watermelon");
         fruits.add("Leci");
         fruits.push("Salak");
+        fruits.set(fruits.size() - 1, "Strawberry");
         
         for (String fruit : fruits) {
             System.out.printf("%s ", fruit);
